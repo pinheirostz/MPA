@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos - Plenitude Apostólica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold:#D4A017; --green-dark:#053318; --blue-deep:#0D1F4E;
+      --cream:#EFE8D5; --white:#F9F6EF;
+    }
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Lato',sans-serif; background:var(--green-dark); color:var(--white);}
+
+    header {
+      background:linear-gradient(135deg,var(--green-dark),var(--blue-deep));
+      padding:10px 20px; text-align:center;
+      border-bottom:2px solid var(--gold);
+      box-shadow:0 4px 20px rgba(0,0,0,0.5);
+      position:sticky; top:0; z-index:100;
+    }
+    .logo-container {display:flex; justify-content:center; align-items:center; margin-bottom:8px;}
+    .logo {max-width:70px; height:auto; border-radius:50%; box-shadow:0 0 12px rgba(212,160,23,0.6); transition:transform 0.3s ease;}
+    .logo:hover {transform:scale(1.1);}
+    .header-title h1 {font-family:'Cinzel',serif; font-size:1.6rem; color:var(--gold);}
+    .header-title h1 span {display:block; font-size:0.75rem; color:var(--cream); letter-spacing:2px; font-weight:300; text-transform:uppercase;}
+    nav {margin-top:8px;}
+    nav a {color:var(--cream); text-decoration:none; margin:0 10px; font-weight:700; text-transform:uppercase; font-size:0.8rem;}
+    nav a:hover {color:var(--gold);}
+
+    .hero {
+      min-height:50vh; display:flex; flex-direction:column;
+      justify-content:center; align-items:center; text-align:center;
+      background:linear-gradient(180deg,var(--blue-deep),var(--green-dark));
+      padding:40px 20px;
+    }
+    .hero h2 {font-family:'Cinzel',serif; font-size:2.2rem; margin-bottom:20px; color:var(--white);}
+    .hero h2 em {color:var(--gold);}
+    .hero p {max-width:700px; color:var(--cream); font-size:1.1rem; margin-bottom:25px;}
+
+    .cards {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px; max-width:960px; margin:30px auto; padding:0 20px;
+    }
+    .card {
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(212,160,23,0.3);
+      border-radius:8px; padding:20px; text-align:center;
+      cursor:pointer; transition:0.3s;
+    }
+    .card:hover {transform:translateY(-5px); border-color:var(--gold);}
+    .card h3 {color:var(--gold); font-family:'Cinzel',serif; margin-bottom:10px;}
+    .card p {color:var(--cream); font-size:0.9rem; margin-bottom:15px;}
+    .card-btn {display:inline-block; padding:8px 20px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; font-size:0.8rem; text-transform:uppercase;}
+    .card-btn:hover {background:var(--gold); color:var(--green-dark);}
+
+    .modal {
+      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+      background:rgba(0,0,0,0.7); justify-content:center; align-items:center;
+    }
+    .modal-content {
+      background:var(--white); color:var(--green-dark);
+      padding:20px; border-radius:8px; max-width:500px; text-align:center;
+    }
+    .close {cursor:pointer; color:var(--gold); font-weight:bold; font-size:1.2rem;}
+
+    footer {
+      background:linear-gradient(135deg,var(--green-dark),var(--blue-deep));
+      padding:15px; text-align:center; border-top:2px solid var(--gold);
+    }
+    footer p {color:var(--cream); font-size:0.85rem;}
+    footer .footer-brand {color:var(--gold); font-family:'Cinzel',serif; margin-bottom:8px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-title">
+    <h1>Plenitude Apostólica<span>Eventos</span></h1>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>Próximos <em>Eventos</em></h2>
+  <p>Descubra os encontros especiais preparados para edificar sua fé e fortalecer a comunhão.</p>
+</section>
+
+<section class="cards">
+  <div class="card" data-info="Um final de semana dedicado à adoração e música, com participação de ministérios locais.">
+    <h3>Conferência de Louvor</h3>
+    <p>Adoração e música.</p>
+    <span class="card-btn">Detalhes</span>
+  </div>
+  <div class="card" data-info="Três dias de imersão na presença de Deus, com oração, estudo e comunhão.">
+    <h3>Retiro Espiritual</h3>
+    <p>Imersão na presença de Deus.</p>
+    <span class="card-btn">Inscreva-se</span>
+  </div>
+  <div class="card" data-info="Sete noites de intercessão pela cidade de Manaus e pelas famílias da igreja.">
+    <h3>Campanha de Oração</h3>
+    <p>Intercessão pela cidade.</p>
+    <span class="card-btn">Participar</span>
+  </div>
+  <div class="card" data-info="Distribuição de alimentos e roupas para comunidades carentes. Junte-se a nós nessa missão.">
+    <h3>Ação Solidária</h3>
+    <p>Apoio às comunidades.</p>
+    <span class="card-btn">Voluntariar</span>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" id="close">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-info"></p>
+  </div>
+</div>
+
+<footer id="contato">
+  <p class="footer-brand">Ministério da Plenitude Apostólica</p>
+  <p>Rua Rio Carabinani · São José Operário · Manaus / AM</p>
+  <p>Telefone: (92) XXXX-XXXX</p>
+  <p style="margin-top:10px;font-size:0.75rem;opacity:0.5;">© 2026 Ministério da Plenitude Apostólica · Todos os direitos reservados</p>
+</footer>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalInfo = document.getElementById('modal-info');
+  const closeBtn = document.getElementById('close');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      modalTitle.textContent = card.querySelector('h3').textContent;
+      modalInfo.textContent = card.getAttribute('data-info');
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

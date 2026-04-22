@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo de Conexão - Plenitude Apostólica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold:#D4A017;
+      --green-dark:#053318;
+      --blue-deep:#0D1F4E;
+      --cream:#EFE8D5;
+      --white:#F9F6EF;
+    }
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Lato',sans-serif; background:var(--green-dark); color:var(--white); scroll-behavior:smooth;}
+
+    header {
+      background:linear-gradient(135deg,var(--green-dark),var(--blue-deep));
+      padding:10px 20px;
+      text-align:center;
+      border-bottom:2px solid var(--gold);
+      box-shadow:0 4px 20px rgba(0,0,0,0.5);
+      position:sticky; top:0; z-index:100;
+    }
+    .header-title h1 {
+      font-family:'Cinzel',serif;
+      font-size:1.6rem;
+      color:var(--gold);
+      text-shadow:2px 2px 6px rgba(0,0,0,0.6);
+    }
+    .header-title h1 span {
+      display:block;
+      font-size:0.75rem;
+      color:var(--cream);
+      letter-spacing:2px;
+      font-weight:300;
+      text-transform:uppercase;
+    }
+    nav {margin-top:8px;}
+    nav a {
+      color:var(--cream);
+      text-decoration:none;
+      margin:0 10px;
+      font-weight:700;
+      text-transform:uppercase;
+      font-size:0.8rem;
+      transition:0.3s;
+    }
+    nav a:hover {color:var(--gold);}
+
+    .hero {
+      min-height:50vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(180deg,var(--blue-deep),var(--green-dark));
+      padding:40px 20px;
+      animation:fadeIn 1.2s ease-in;
+    }
+    .hero p {
+      max-width:700px;
+      color:var(--cream);
+      font-size:1.1rem;
+      margin-bottom:25px;
+    }
+    .hero-cta {
+      display:inline-block;
+      padding:10px 25px;
+      background:var(--gold);
+      color:var(--green-dark);
+      font-weight:700;
+      text-decoration:none;
+      border-radius:4px;
+      transition:0.3s;
+    }
+    .hero-cta:hover {background:var(--cream);}
+
+    .section {
+      max-width:900px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+    .section h3 {
+      font-family:'Cinzel',serif;
+      color:var(--gold);
+      margin-bottom:15px;
+      border-bottom:2px solid var(--gold);
+      display:inline-block;
+    }
+    .section p {color:var(--cream); margin-bottom:20px;}
+
+    .cards {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:20px;
+      max-width:960px;
+      margin:30px auto;
+      padding:0 20px;
+    }
+    .card {
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(212,160,23,0.3);
+      border-radius:8px;
+      padding:20px;
+      text-align:center;
+      transition:0.3s;
+    }
+    .card:hover {transform:translateY(-5px); border-color:var(--gold);}
+    .card h3 {
+      color:var(--gold);
+      font-family:'Cinzel',serif;
+      margin-bottom:10px;
+    }
+    .card p {color:var(--cream); font-size:0.9rem; margin-bottom:15px;}
+    .card-btn {
+      display:inline-block;
+      padding:8px 20px;
+      border:1px solid var(--gold);
+      color:var(--gold);
+      text-decoration:none;
+      font-size:0.8rem;
+      text-transform:uppercase;
+      transition:0.3s;
+    }
+    .card-btn:hover {background:var(--gold); color:var(--green-dark);}
+
+    footer {
+      background:linear-gradient(135deg,var(--green-dark),var(--blue-deep));
+      padding:15px;
+      text-align:center;
+      border-top:2px solid var(--gold);
+    }
+    footer p {color:var(--cream); font-size:0.85rem;}
+    footer .footer-brand {color:var(--gold); font-family:'Cinzel',serif; margin-bottom:8px;}
+
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-title">
+    <h1>Plenitude Apostólica<span>Grupo de Conexão</span></h1>
+  </div>
+</header>
+
+<section class="hero">
+  <p>Os Grupos de Conexão são momentos semanais para fortalecer relacionamentos, estudar a Palavra e viver a fé em comunidade.</p>
+  <a href="#participar" class="hero-cta">Junte-se a um grupo</a>
+</section>
+
+<section class="section" id="visao">
+  <h3>Visão</h3>
+  <p>Promover comunhão, discipulado e crescimento espiritual em pequenos grupos, criando laços de amizade e apoio mútuo.</p>
+</section>
+
+<section class="section" id="atividades">
+  <h3>Atividades</h3>
+  <p>- Louvor e adoração<br>
+     - Estudo bíblico prático<br>
+     - Dinâmicas de integração<br>
+     - Momentos de oração<br>
+     - Ações sociais e apoio comunitário</p>
+</section>
+
+<!-- Introdução antes dos cards -->
+<section class="section">
+  <h3>Grupos</h3>
+  <p>Nossos Grupos de Conexão são organizados para atender diferentes perfis e necessidades espirituais. Cada grupo tem sua identidade e propósito, mas todos compartilham o mesmo objetivo: viver em comunhão e crescer na fé.</p>
+</section>
+
+<section class="cards" id="grupos">
+  <div class="card">
+    <h3>ENRAIZADOS</h3>
+    <p>Grupo voltado para fortalecer a fé e criar raízes firmes na Palavra de Deus.</p>
+    <a href="#" class="card-btn">Participar</a>
+  </div>
+  <div class="card">
+    <h3>PÉROLAS DO REI</h3>
+    <p>Encontros que valorizam a identidade em Cristo e promovem comunhão entre irmãos.</p>
+    <a href="#" class="card-btn">Conheça</a>
+  </div>
+  <div class="card">
+    <h3>IMERSOS</h3>
+    <p>Um grupo para mergulhar profundamente na presença de Deus, com oração e estudo bíblico.</p>
+    <a href="#" class="card-btn">Unir-se</a>
+  </div>
+</section>
+
+<section class="section" id="participar">
+  <h3>Como Participar</h3>
+  <p>Entre em contato com a liderança da igreja para saber qual grupo está mais próximo de você. Todos são bem-vindos!</p>
+</section>
+
+<footer id="contato">
+  <p class="footer-brand">Ministério da Plenitude Apostólica</p>
+  <p>Rua Rio Carabinani · São José Operário · Manaus / AM</p>
+  <p>Telefone: (92) XXXX-XXXX</p>
+  <p style="margin-top:10px;font-size:0.75rem;opacity:0.5;">© 2026 Ministério da Plenitude Apostólica · Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

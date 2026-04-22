@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ministérios - Plenitude Apostólica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {--gold:#D4A017; --green-dark:#053318; --blue-deep:#0D1F4E; --cream:#EFE8D5; --white:#F9F6EF;}
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Lato',sans-serif; background:var(--green-dark); color:var(--white);}
+
+    header {background:linear-gradient(135deg,var(--green-dark),var(--blue-deep)); padding:10px 20px; text-align:center; border-bottom:2px solid var(--gold);}
+    .logo-container {display:flex; justify-content:center; align-items:center; margin-bottom:8px;}
+    .logo {max-width:70px; height:auto; border-radius:50%; box-shadow:0 0 12px rgba(212,160,23,0.6); transition:transform 0.3s ease;}
+    .logo:hover {transform:scale(1.1);}
+    .header-title h1 {font-family:'Cinzel',serif; font-size:1.6rem; color:var(--gold);}
+    .header-title h1 span {display:block; font-size:0.75rem; color:var(--cream); letter-spacing:2px; font-weight:300; text-transform:uppercase;}
+    nav {margin-top:8px;}
+    nav a {color:var(--cream); text-decoration:none; margin:0 10px; font-weight:700; text-transform:uppercase; font-size:0.8rem;}
+    nav a:hover {color:var(--gold);}
+
+    .hero {min-height:50vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+      background:linear-gradient(180deg,var(--blue-deep),var(--green-dark)); padding:40px 20px;}
+    .hero h2 {font-family:'Cinzel',serif; font-size:2.2rem; margin-bottom:20px; color:var(--white);}
+    .hero h2 em {color:var(--gold);}
+    .hero p {max-width:700px; color:var(--cream); font-size:1.1rem; margin-bottom:25px;}
+
+    .cards {display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; max-width:960px; margin:30px auto; padding:0 20px;}
+    .card {background:rgba(255,255,255,0.05); border:1px solid rgba(212,160,23,0.3); border-radius:8px; padding:20px; text-align:center; transition:0.3s;}
+    .card:hover {transform:translateY(-5px); border-color:var(--gold);}
+    .card h3 {color:var(--gold); font-family:'Cinzel',serif; margin-bottom:10px;}
+    .card p {color:var(--cream); font-size:0.9rem; margin-bottom:15px;}
+    .card-btn {display:inline-block; padding:8px 20px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; font-size:0.8rem; text-transform:uppercase;}
+    .card-btn:hover {background:var(--gold); color:var(--green-dark);}
+
+    footer {background:linear-gradient(135deg,var(--green-dark),var(--blue-deep)); padding:15px; text-align:center; border-top:2px solid var(--gold);}
+    footer p {color:var(--cream); font-size:0.85rem;}
+    footer .footer-brand {color:var(--gold); font-family:'Cinzel',serif; margin-bottom:8px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-title">
+    <h1>Plenitude Apostólica<span>Ministérios</span></h1>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>Nossos <em>Ministérios</em></h2>
+  <p>Conheça as áreas de atuação da igreja e descubra como você pode servir e crescer na fé.</p>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>Ministério de Louvor</h3>
+    <p>Responsável por conduzir a igreja em adoração e música, criando um ambiente de entrega e celebração.</p>
+    <a href="#" class="card-btn">Saiba Mais</a>
+  </div>
+  <div class="card">
+    <h3>Ministério Infantil</h3>
+    <p>Ensina a Palavra de Deus às crianças de forma criativa e divertida, formando discípulos desde cedo.</p>
+    <a href="#" class="card-btn">Participar</a>
+  </div>
+  <div class="card">
+    <h3>Ministério de Acolhimento</h3>
+    <p>Um espaço para jovens viverem a fé, com encontros, estudos e atividades que fortalecem sua caminhada.</p>
+    <a href="#" class="card-btn">Conheça</a>
+  </div>
+  <div class="card">
+    <h3>Ministério de Intercessão</h3>
+    <p>Grupo dedicado à oração e intercessão pela igreja, pela cidade e pelas famílias.</p>
+    <a href="#" class="card-btn">Unir-se</a>
+  </div>
+  <div class="card">
+    <h3>Ministério de Ação Social</h3>
+    <p>Promove projetos de apoio às comunidades carentes, levando amor e esperança através de ações práticas.</p>
+    <a href="#" class="card-btn">Voluntariar</a>
+  </div>
+</section>
+
+<footer id="contato">
+  <p class="footer-brand">Ministério da Plenitude Apostólica</p>
+  <p>Rua Rio Carabinani · São José Operário · Manaus / AM</p>
+  <p>Telefone: (92) XXXX-XXXX</p>
+  <p style="margin-top:10px;font-size:0.75rem;opacity:0.5;">© 2026 Ministério da Plenitude Apostólica · Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
